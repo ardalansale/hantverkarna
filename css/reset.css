@@ -1,0 +1,48 @@
+/* Box-sizing: Alla element använder border-box för mer förutsägbart layoutbeteende */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Förhindra att mobilbrowsern förstorar text */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Ta bort standardmarginal på vanliga blockelement */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Ta bort punktlista på listor med role='list' */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Bilder, video osv. fyller sin container och visas som block */
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Formelement ärvs från body-typografi */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Textlänkar utan klass får standardutseende */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Se till att element med id:target får extra scrollmarginal */
+:target {
+    scroll-margin-block: 5ex;
+}
