@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="BESKRIV INNEHÅLL">
-    <title>Hantverkarna - Hem</title>
+    <title>Hem - Hantverkarna</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="LÄGG IN GOOGLE FONT">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-    
+        <nav class="nav-primary nav-wrapper">
+            <div class="logo-container">
+                <p class="logo">
+                Hantverkarna
+                </p>
+            </div>
+            <div class="nav-buttons">
+                <button type="button" class="btn primary">Så funkar hantverkarna</button>
+                <button type="button" class="btn primary">Meddelanden</button>
+                <button type="button" class="btn secondary">Logga in</button>
+            </div>
+        </nav>
     </header>
     
-    
-    <main>
+    <main class="main-wrapper">
+        <section class="hero-container">
+            <div class="hero-text">
+                <h1>Hitta din nästa hantverkare</h1>
+                <p>I din närhet och på tider som passar dig</p>
+            </div>
+
+            <div class="hero-search">
+                <div class="hero-searchbar">
+                    <form class="hero-searchbar" method="get" action="#">
+                        <input type="text" placeholder="Sök efter hantverkare" name="search" id="search">
+                        <button type="button" name="search" class="searchbar-btn">Sök</button>
+                    </form>
+
+                <div class="hero-search__filter">
+                </div>
+            </div>
+            
+        </section>
     
     </main>
     

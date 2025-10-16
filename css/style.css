@@ -1,4 +1,13 @@
-/* === Ardalans CSS-bas === */
+/* Design System */
+:root {
+    --background-color: hsl(0, 0%, 98%); /* white */
+    --text-color: hsl(0, 0%, 8%); /* black */
+    --primary-color: hsl(26, 100%, 50%); /* orange */
+    --secondary-color: #0074c7; /* blue */
+    --tertiary-color: hsl(0, 0%, 36%); /* grey */
+}
+
+/* Global */
 
 html {
     font-size: 62.5%;
@@ -7,11 +16,11 @@ html {
 }
 
 body {
-    font-family: '', Helvetica, sans-serif;
+    font-family: 'Noto Sans', Helvetica, sans-serif;
     font-size: 1.6rem;
-    line-height: 1.5;
-    color: hsl(0, 0%, 14%);
-    background-color: hsl(210, 60%, 95%);
+    /* line-height: 1.5; */
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 a {
@@ -20,8 +29,137 @@ a {
     text-decoration-skip-ink: auto;
 }
 
-.wrapper {
+
+/* Navbar */
+.nav-wrapper {
     max-width: 120rem;
     margin: 0 auto;
     padding: 0 4rem;
+}
+
+.nav-primary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: auto;
+    height: 9.2rem;
+    box-shadow: 0 5px 10px rgba(154,160,185,.25), 0 15px 40px rgba(166,173,201,.2);
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+.logo-container {
+    cursor: pointer;
+    height: auto;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+
+/* Main */
+
+.main-wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+}
+
+/* Home - Hero */
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 32rem;
+    gap: 2rem;
+    background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
+    url('/images/hero-bg.webp') no-repeat;
+    border-radius: 2rem;
+}
+
+.hero-text {
+    text-align: center;
+    height: auto;
+    padding: 0.8rem;
+    color: white;
+}
+
+.hero-search {
+    width: 100%;
+}
+
+.hero-searchbar {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-searchbar form {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1.4rem;
+    background-color: rgb(255, 255, 255);
+    border: 0.2rem solid var(--primary-color);
+    border-radius: 1.4rem;
+    width: 50%;
+}
+
+.searchbar-btn {
+    padding: 0.4rem 1.4rem;
+    border: none; 
+    background-color: transparent;
+    cursor: pointer;
+    border-left: 0.2rem solid var(--primary-color);
+    font-weight: 600;
+}
+
+.hero-searchbar input[type=text] {
+    border: none;
+    background-color: transparent;
+}
+
+.hero-searchbar input[type=text]:focus {
+    outline: none;
+}
+
+.hero-searchbar input[type=text]::placeholder {
+    color: rgb(100, 100, 100);
+}
+
+/* Components */
+
+.btn { 
+    padding: 0.7rem 1.4rem;
+    border-radius: 1.4rem;
+    font-size: 16;
+    cursor: pointer; 
+}
+
+.btn.primary {
+    background-color: transparent;
+    border: 0.2rem var(--primary-color) solid ;
+}
+
+.btn.primary:hover {
+    border-color: color-mix(in srgb, var(--primary-color) 50%, transparent); /* Ger en ljusare färg */
+}
+
+
+.btn.secondary {
+    background-color: var(--secondary-color);
+    border: 0.2rem var(--secondary-color) solid;
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: color-mix(in srgb, var(--secondary-color) 90%, transparent); /* Ger en ljusare färg */
+    border-color: color-mix(in srgb, var(--secondary-color) 90%, transparent);
 }
