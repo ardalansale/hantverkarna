@@ -29,6 +29,16 @@ a {
     text-decoration-skip-ink: auto;
 }
 
+h1 {
+    font-size: clamp(2.4rem, 1.8rem + 1vw, 3.2rem);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+    font-weight: 600;
+}
+
 .hidden-element {
     display: none;
 }
@@ -37,7 +47,7 @@ a {
 .nav-wrapper {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 0 4rem;
+    padding: 0 clamp(2rem, 0.571rem + 3.81vw, 4rem);
 }
 
 .nav-primary {
@@ -45,7 +55,7 @@ a {
     justify-content: space-between;
     align-items: center;
     max-width: auto;
-    height: 9.2rem;
+    height: 8.4rem;
     box-shadow: 0 5px 10px rgba(154,160,185,.25), 0 15px 40px rgba(166,173,201,.2);
     border-radius: 0 0 0.4rem 0.4rem;
 }
@@ -54,6 +64,7 @@ a {
     display: flex;
     gap: 0.8rem;
 }
+
 .logo-container {
     cursor: pointer;
     height: auto;
@@ -61,7 +72,7 @@ a {
 
 .logo {
     color: var(--primary-color);
-    font-size: 2.4rem;
+    font-size: clamp(2.0rem, 1.6rem + 1vw, 2.4rem);
     font-weight: 800;
 }
 
@@ -70,14 +81,22 @@ a {
 .main-wrapper {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 0 4rem;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    padding: 0 clamp(2rem, 0.571rem + 3.81vw, 4rem);
+    margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
+    margin-bottom: clamp(4rem, 1.143rem + 7.619vw, 8rem);
+    display: grid;
+    grid-template-areas:
+        "hero"
+        "categories"
+        "articles"
+        "footer";
+    /* grid-column: auto; */
 }
 
 /* Home - Hero */
 
 .hero-container {
+    grid-area: hero;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +106,8 @@ a {
     background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
     url('/images/hero-bg.webp') no-repeat;
     border-radius: 2rem;
-    
+    padding: 2.4rem;
+
 }
 
 .hero-text {
@@ -109,11 +129,11 @@ a {
 .hero-searchbar form {
     display: flex;
     justify-content: space-between;
-    padding: 0.7rem 1.4rem;
+    padding: 0.2rem 1.4rem;
     background-color: rgb(255, 255, 255);
     border: 0.2rem solid var(--primary-color);
     border-radius: 1.4rem;
-    width: 50%;
+    width: clamp(40rem, 30.857rem + 19.048vw, 50rem);
 }
 
 .searchbar-btn {
@@ -138,13 +158,44 @@ a {
     color: rgb(100, 100, 100);
 }
 
+/* Categories */
+
+.categories-container {
+    grid-area: categories;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    height: 32rem;
+    gap: 2rem;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 2.4rem;
+}
+
+.categories-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.categories-banner {
+    background-color: red;
+    height: 8.4rem;
+}
+
 /* Components */
 
 .btn { 
     padding: 0.7rem 1.4rem;
     border-radius: 1.4rem;
-    font-size: 16;
+    font-size: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);    
     cursor: pointer; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .btn.primary {
@@ -166,4 +217,57 @@ a {
 .btn.secondary:hover {
     background-color: color-mix(in srgb, var(--secondary-color) 90%, transparent); /* Ger en ljusare färg */
     border-color: color-mix(in srgb, var(--secondary-color) 90%, transparent);
+}
+
+/* == Media Queries == */
+
+/* == Tablet == */
+@media (max-width: 1024px) {
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        padding: 2rem;
+    }
+
+    .image-gallery img {
+        aspect-ratio: 5 / 3;
+        object-fit: cover;
+    }
+}
+
+
+/* == Mobile == */
+@media (max-width: 600px) {
+
+    /* Nav */
+    .nav-buttons {
+    gap: 2rem;
+}
+
+/* Components */
+.btn {
+    flex-direction: column;
+}
+    .btn.primary,
+    .btn.secondary {
+        padding: 0;
+        border-radius: 0;
+        border: none;
+        background-color: transparent;
+        color: black;
+}
+
+    .image-gallery {
+        grid-template-columns: 1fr; /* en kolumn */
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .image-gallery img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
 }

@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 <body>
     <!-- Navbar -->
@@ -21,9 +23,9 @@
                 </a>
             </div>
             <div class="nav-buttons">
-                <a href="/sa-funkar-hantverkarna" class="btn primary">Så funkar hantverkarna</a>
-                <a href="/meddelanden" class="btn primary">Meddelanden</a>
-                <button type="button" class="btn secondary">Logga in</button> <!-- Modal -->
+                <a href="/om-tjänsten" class="btn primary"><i class="fa-regular fa-handshake"></i></i></i>Om tjänsten</a>
+                <a href="/meddelanden" class="btn primary"><i class="fa-regular fa-message"></i>Meddelanden</a>
+                <button type="button" class="btn secondary"><i class="fa-regular fa-user"></i>Logga in</button> <!-- Modal -->
             </div>
         </nav>
     </header>
@@ -49,16 +51,17 @@
             </div>
         </section>
 
-        <section class="category-container">
-            <div class="category-toprow">
+        <!-- Kategorier -->
+        <section class="categories-container">
+            <div class="categories-top-row">
                 <h2>Upptäck våra kategorier</h2>
-                <button type="button" name="categories" class="all-categories" aria-label="Visa alla kategorier">
+                <a href="/kategorier" class="all-categories">
                     Alla kategorier >
-                </button>
+                </a>
             </div>
 
-            <div class="category-banner">
-                <ul class="category-banner__items" role="list">
+            <div class="categories-banner">
+                <ul class="categories-banner__items" role="list">
                     <li class="category-banner__item">
 
                     </li>
