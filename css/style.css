@@ -29,6 +29,9 @@ a {
     text-decoration-skip-ink: auto;
 }
 
+.hidden-element {
+    display: none;
+}
 
 /* Navbar */
 .nav-wrapper {
@@ -84,6 +87,7 @@ a {
     background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
     url('/images/hero-bg.webp') no-repeat;
     border-radius: 2rem;
+    
 }
 
 .hero-text {

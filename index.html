@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,36 +14,55 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav class="nav-primary nav-wrapper">
+        <nav class="nav-primary nav-wrapper" aria-label="Huvudmeny">
             <div class="logo-container">
-                <p class="logo">
+                <a href="/" class="logo" aria-label="Hantverkarna, startsida">
                 Hantverkarna
-                </p>
+                </a>
             </div>
             <div class="nav-buttons">
-                <button type="button" class="btn primary">Så funkar hantverkarna</button>
-                <button type="button" class="btn primary">Meddelanden</button>
-                <button type="button" class="btn secondary">Logga in</button>
+                <a href="/sa-funkar-hantverkarna" class="btn primary">Så funkar hantverkarna</a>
+                <a href="/meddelanden" class="btn primary">Meddelanden</a>
+                <button type="button" class="btn secondary">Logga in</button> <!-- Modal -->
             </div>
         </nav>
     </header>
     
     <main class="main-wrapper">
+        <!-- Hero -->
         <section class="hero-container">
             <div class="hero-text">
                 <h1>Hitta din nästa hantverkare</h1>
                 <p>I din närhet och på tider som passar dig</p>
             </div>
-
+            
+            <!-- Sökruta -->
             <div class="hero-search">
                 <div class="hero-searchbar">
-                    <form class="hero-searchbar" method="get" action="#">
+                    <form class="hero-searchbar" method="get" action="#" role="search">
+                        <label for="search" class="hidden-element">Sök efter hantverkare</label> <!-- Tillgänglighetsanpassad för skärmläsare --> 
                         <input type="text" placeholder="Sök efter hantverkare" name="search" id="search">
-                        <button type="button" name="search" class="searchbar-btn">Sök</button>
+                        <button type="button" name="search" class="searchbar-btn" aria-label="Sök">Sök</button>
                     </form>
-
                 <div class="hero-search__filter">
                 </div>
+            </div>
+        </section>
+
+        <section class="category-container">
+            <div class="category-toprow">
+                <h2>Upptäck våra kategorier</h2>
+                <button type="button" name="categories" class="all-categories" aria-label="Visa alla kategorier">
+                    Alla kategorier >
+                </button>
+            </div>
+
+            <div class="category-banner">
+                <ul class="category-banner__items" role="list">
+                    <li class="category-banner__item">
+
+                    </li>
+                </ul>
             </div>
             
         </section>
