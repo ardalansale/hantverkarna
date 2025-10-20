@@ -21,6 +21,14 @@ body {
     /* line-height: 1.5; */
     color: var(--text-color);
     background-color: var(--background-color);
+
+    display: flex; /* Hela sidan fylls */
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Hela sidan fylls;  <main> fyller allt utrymme som blir över*/
 }
 
 a {
@@ -40,7 +48,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 .hidden-element {
@@ -76,7 +84,7 @@ h3 {
 
 .logo {
     color: var(--primary-color);
-    font-size: clamp(2.0rem, 1.6rem + 1vw, 2.4rem);
+    font-size: clamp(1.4rem, 1.2rem + 1vw, 2.4rem);
     font-weight: 800;
 }
 
@@ -90,9 +98,9 @@ h3 {
     margin: 0 auto;
     padding: 0 clamp(2rem, 0.571rem + 3.81vw, 4rem);
     margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
-    margin-bottom: clamp(4rem, 1.143rem + 7.619vw, 8rem);
     display: grid;
     gap: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+    margin-bottom: 0;
 }
 
 .wrapper.home {
@@ -100,7 +108,13 @@ h3 {
         "hero"
         "categories"
         "articles"
-        "footer";
+        "footer"
+    /* grid-column: auto; */
+}
+
+.wrapper.about-service {
+    grid-template-areas:
+        "about-service"
     /* grid-column: auto; */
 }
 
@@ -222,7 +236,7 @@ footer {
 }
 
 /* ===== PAGES === */
-
+/* ===== Hem/Startsida === */
 /* Home - Hero */
 .hero-container {
     grid-area: hero;
@@ -231,7 +245,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 32rem;
-    gap: 2rem;
+    gap: clamp(2rem, 0.571rem + 3.81vw, 4rem);
     background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
     url('../images/hero-bg.webp') no-repeat;
     border-radius: 2rem;
@@ -241,8 +255,10 @@ footer {
 .hero-text {
     text-align: center;
     height: auto;
-    padding: 0.8rem;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.4rem, -0.171rem + 1.524vw, 1.2rem);
 }
 
 .hero-search {
@@ -403,7 +419,7 @@ footer {
     margin-top: 2rem;
 }
 
-article {
+.articles-card {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -412,13 +428,173 @@ article {
     cursor: pointer;
 }
 
-article img {
+.articles-card img {
     width: 100%;
     height: clamp(12rem, 20vw, 16rem);
     object-fit: cover;
     border-radius: 0.8rem;
 }
 
+/* ===== Om Tjänsten ===== */
+.about-service-container {
+    grid-area: about-service;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    gap: 2rem;
+    padding: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+}
+
+.about-service-title {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.4rem, -0.171rem + 1.524vw, 1.2rem);
+}
+
+.about-service-title h1 {
+    color: var(--primary-color);
+}
+
+/* Om tjänsten - Hur fungerar det */
+
+.how-container{
+    display: flex;
+    flex-direction: column;
+    display: cente;
+    gap: 2rem;
+}
+
+.how-container h2 {
+    color: var(--secondary-color);
+    position: relative;
+    background-color: blue;
+}
+
+.how-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: clamp(2rem, 3vw, 2.4rem);
+}
+
+.how-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.6rem;
+    border-radius: 1.2rem;
+    background-color: rgba(255, 127, 0, 0.05);
+}
+
+.how-step i {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.how-step h3 {
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+/* Fördelar-sektion */
+.benefits {
+    grid-area: why;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.6rem;
+    margin: 2rem 0;
+}
+
+.benefits li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(0, 116, 199, 0.05);
+    border-radius: 0.8rem;
+}
+
+.benefits li i {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    min-width: 2rem;
+}
+
+/* FAQ-sektion */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin: 2rem 0;
+}
+
+.faq-item {
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.8rem;
+    padding: 1.6rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.faq-item h3 {
+    margin-bottom: 0.8rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item h3::after {
+    content: "+";
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+    content: "−";
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 1rem;
+    color: var(--tertiary-color);
+}
+
+.faq-item.active p {
+    display: block;
+} */
+
+/* ==== Media Queries ==== */
+/* == Tablet == */
+@media (max-width: 1024px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* == Mobile == */
+@media (max-width: 600px) {
+    .about-service {
+        padding: 1.6rem;
+        gap: 2rem;
+    }
+
+    .step {
+        padding: 1.2rem;
+    }
+
+    .benefits li {
+        padding: 0.8rem;
+    }
+}
 
 /* ==== Media Queries ==== */
 /* == Tablet == */
