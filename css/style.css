@@ -221,7 +221,7 @@ footer {
     border-color: color-mix(in srgb, var(--secondary-color) 90%, transparent);
 }
 
-/* ===== PAGES ===== */
+/* ===== PAGES === */
 
 /* Home - Hero */
 .hero-container {
@@ -233,7 +233,7 @@ footer {
     height: 32rem;
     gap: 2rem;
     background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
-    url('/images/hero-bg.webp') no-repeat;
+    url('../images/hero-bg.webp') no-repeat;
     border-radius: 2rem;
     padding: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
 }
