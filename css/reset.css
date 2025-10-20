@@ -10,7 +10,6 @@ html {
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
-    overflow-y: scroll;
 }
 
 /* Ta bort standardmarginal på vanliga blockelement */
