@@ -120,11 +120,17 @@ h3 {
     /* grid-column: auto; */
 }
 
+.wrapper.about-us {
+    grid-template-areas:
+        "about-us"
+    /* grid-column: auto; */
+}
+
 .page-title {
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: clamp(0.4rem, -0.171rem + 1.524vw, 1.2rem);
+    gap: clamp(0.8rem, -0.171rem + 1.524vw, 1.2rem);
 }
 
 .page-title h1 {
@@ -457,7 +463,6 @@ footer {
     justify-content: center;
     height: fit-content;
     gap: clamp(2.8rem, 1.943rem + 2.286vw, 4rem);
-    padding: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
 }
 
 /* Om tjänsten - Hur det fungerar */
@@ -527,11 +532,41 @@ footer {
 /* Om Oss */
 
 .about-us-container {
+    grid-area: about-us;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: fit-content;
-    padding: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+    gap: clamp(1.2rem, 0.943rem + 2.286vw, 2rem);
+}
+
+.about-us-images {
+    display: flex;
+    gap: clamp(4rem, -1.714rem + 15.238vw, 8rem);
+    width: 100%;
+    align-items: center;
+}
+
+.about-us-image {
+    overflow: hidden;
+    text-align: center;
+    max-height: 80rem;
+}
+
+.about-us-image img {
+    width: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: clamp(0.4rem, -0.029rem + 1.143vw, 1rem);
+    height: 80%;
+}
+
+.about-us-image figcaption {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: var(--tertiary-color);
+    font-style: italic;
+    
 }
 
 /* ==== Media Queries ==== */
@@ -561,6 +596,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 /* ==== Mobile ==== */
 @media (max-width: 600px) {
 
@@ -608,11 +644,17 @@ footer {
         gap: 1.2rem;
     }
 
-    article {
+    .articles-card {
         padding: 1.2rem;
     }
 
-    article img {
+    .articles-card img {
         height: clamp(10rem, 18vw, 12rem);
+    }
+    
+    /* Om Oss */
+    .about-service-image {
+        max-width: 100%;
+        margin: 1.6rem auto;
     }
 }
