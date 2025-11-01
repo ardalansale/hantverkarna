@@ -126,6 +126,12 @@ h3 {
     /* grid-column: auto; */
 }
 
+.wrapper.error {
+    grid-template-areas:
+        "error"
+    /* grid-column: auto; */
+}
+
 .page-title {
     height: auto;
     display: flex;
@@ -568,6 +574,22 @@ footer {
     font-style: italic;
     
 }
+
+/* 404 Error / Not Found */
+
+.error-container {
+    grid-area: error;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    gap: clamp(1.2rem, 0.943rem + 2.286vw, 2rem);
+}
+
+.error-container a {
+    color: blue
+}
+
 
 /* ==== Media Queries ==== */
 /* ==== Tablet ==== */
