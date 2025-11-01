@@ -587,6 +587,8 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
+    text-align: center;
     height: fit-content;
     gap: clamp(1.2rem, 0.943rem + 2.286vw, 2rem);
 }
@@ -594,7 +596,6 @@ footer {
 .error-container a {
     color: blue
 }
-
 
 /* ==== Media Queries ==== */
 /* ==== Tablet ==== */
