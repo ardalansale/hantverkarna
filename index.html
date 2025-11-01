@@ -43,10 +43,10 @@
             <!-- Sökruta -->
             <div class="hero-search">
                 <div class="hero-searchbar">
-                    <form class="hero-searchbar" method="get" action="#" role="search">
-                        <label for="search" class="hidden-element">Sök efter hantverkare</label> <!-- Tillgänglighetsanpassad för skärmläsare --> 
-                        <input type="text" placeholder="Sök efter hantverkare" name="search" id="search">
-                        <button type="button" name="search" class="searchbar-btn" aria-label="Sök">Sök</button>
+                    <form class="hero-searchbar" method="get" action="/sok" role="search">
+                        <label for="search" class="visually-hidden">Sök efter hantverkare</label> <!-- Tillgänglighetsanpassad för skärmläsare --> 
+                        <input type="search" placeholder="Sök efter hantverkare" name="search" id="search" autocomplete="off" required>
+                        <button type="submit" name="search" class="searchbar-btn" aria-label="Sök efter hantverkare">Sök</button>
                     </form>
                 <div class="hero-search__filter">
                 </div>
@@ -54,10 +54,10 @@
         </section>
 
         <!-- Kategorier -->
-        <section class="categories-container">
+        <section class="categories-container" aria-labelledby="categories-heading">
             <div class="categories-top-row">
                 <h2>Upptäck våra kategorier</h2>
-                <a href="/404.html" class="all-categories">
+                <a href="/404.html" class="all-categories" aria-label="Se alla kategorier">
                     Alla kategorier >
                 </a>
             </div>
@@ -67,55 +67,55 @@
                 
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-paint-brush"></i>
+                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
                         <span>Målare</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-bolt"></i>
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
                         <span>Elektriker</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-hammer"></i>
+                        <i class="fas fa-hammer" aria-hidden="true"></i>
                         <span>Snickare</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-wrench"></i>
+                        <i class="fas fa-wrench" aria-hidden="true"></i>
                         <span>Rörmokare</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                 <a href="/404.html">
-                    <i class="fas fa-layer-group"></i>
+                    <i class="fas fa-layer-group" aria-hidden="true"></i>
                     <span>Murare</span>
                 </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-house"></i>
+                        <i class="fas fa-house" aria-hidden="true"></i>
                         <span>Takläggare</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                    <i class="fas fa-water"></i>
-                        <span>VVS-installatör</span>
+                    <i class="fas fa-water" aria-hidden="true"></i>
+                        <span>VVS</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-window-maximize"></i>
+                        <i class="fas fa-window-maximize" aria-hidden="true"></i>
                         <span>Glasmästare</span>
                     </a>
                 </li>
                 <li class="category-banner__item">
                     <a href="/404.html">
-                        <i class="fas fa-fire"></i>
+                        <i class="fas fa-fire" aria-hidden="true"></i>
                         <span>Svetsare</span>
                     </a>
                 </li>
@@ -124,7 +124,7 @@
         </section>
 
         <!-- Artiklar -->
-        <section class="articles-container">
+        <section class="articles-container" aria-labelledby="articles-heading">
             <div class="page-title">
                 <h2>Artiklar</h2>
                 <p>Här hittar du artiklar med praktiska råd, guider och tips för ditt hantverksprojekt; från badrumsrenovering till elarbeten. Skrivna av erfarna hantverkare för att hjälpa dig spara tid, pengar och undvika vanliga misstag. Utforska våra artiklar för att lära dig mer.</p>
@@ -132,33 +132,33 @@
 
             <div class="articles-grid">
                 <article class="articles-card">
-                    <img src="images/article-1.webp" alt="Artikel 1">
+                    <img src="images/article-1.webp" alt="" aria-label="Läs artikeln: 5 tecken på att du behöver en elektriker">
                     <h3>5 tecken på att du behöver en elektriker</h3>
                     <p>Ojämn belysning, proppar som går eller uttag som inte fungerar? Här listar vi de vanligaste varningstecknen som tyder på att du bör anlita en elektriker.</p>
                 </article>
                 <article class="articles-card">
-                    <img src="images/article-2.webp" alt="Artikel 2">
+                    <img src="images/article-2.webp" alt="" aria-label="Läs artikeln: Så väljer du rätt målare: En steg-för-steg-guide">
                     <h3>Så väljer du rätt målare: En steg-för-steg-guide</h3>
                     <p>Att anlita en målare ska inte vara svårt! I den här guiden går vi igenom vad du bör tänka på – från att kolla referenser och priser till att förstå vilken typ av färg som passar ditt hem.</p>
                 </article>
                 <article class="articles-card">
-                    <img src="images/article-3.webp" alt="Artikel 3">
+                    <img src="images/article-3.webp" alt="" aria-label="Läs artikeln: Badrumsrenovering: Så planerar du och undviker vanliga misstag">
                     <h3>Badrumsrenovering: Så planerar du och undviker vanliga misstag</h3>
                     <p>En badrumsrenovering kan snabbt bli dyr om du inte planerar rätt. Här delar vi de vanligaste misstagen (och hur du undviker dem), en tidsplan för projektet och tips på material som håller – utan att spränga budgeten.</p>
                 </article>
                 <article class="articles-card">
-                    <img src="images/article-4.webp" alt="Artikel 4">
+                    <img src="images/article-4.webp" alt="" aria-label="Läs artikeln: DIY vs. proffs: Vilka hantverksjobb kan du göra själv?">
                     <h3>DIY vs. proffs: Vilka hantverksjobb kan du göra själv?</h3>
                     <p>Vissa jobb kan du fixa själv – andra bör du lämna till proffsen. Vi går igenom vilka uppgifter som är lätta att göra själv (t.ex. måla eller montera hyllor) och vilka som kräver expertis (t.ex. elarbeten eller VVS).</p>
                 </article>
                 <article class="articles-card">
-                    <img src="images/article-5.webp" alt="Artikel 5">
-                    <h3>Så hittar du en pålitlig snickare – och undviker svindleri</h3>
+                    <img src="images/article-5.webp" alt="" aria-label="Läs artikeln: Så hittar du en pålitlig snickare och undviker svindleri">
+                    <h3>Så hittar du en pålitlig snickare och undviker svindleri</h3>
                     <p>Att hitta en duktig snickare kan kännas som att leta efter en nål i en höstack. I den här artikeln får du konkreta tips på hur du hittar en seriös och skicklig snickare, vad du bör tänka på innan du anställer någon och hur du undviker vanliga fällor.</p>
                 </article>
                 <article class="articles-card">
-                    <img src="images/article-6.webp" alt="Artikel 6">
-                    <h3>VVS-problem? Så fixar du läckor och proppar själv – eller när du ska ringa en rörmokare.</h3>
+                    <img src="images/article-6.webp" alt="" aria-label="VVS-problem? Så fixar du läckor och proppar själv – eller när du ska ringa en rörmokare">
+                    <h3>VVS-problem? Så fixar du läckor och proppar själv – eller när du ska ringa en rörmokare</h3>
                     <p>Ett läckande rör eller en proppad avlopp behöver inte alltid kräva en dyra besök av en rörmokare. Här lär du dig hur du själv kan åtgärda vanliga VVS-problem med enkla verktyg – och när det är dags att ringa en proffs. Vi delar även tips på underhåll för att förebygga framtida problem.</p>
                 </article>
             </div>
