@@ -448,6 +448,14 @@ footer {
     height: clamp(12rem, 20vw, 16rem);
     object-fit: cover;
     border-radius: 0.8rem;
+        object-position: center 20%;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: clamp(20rem, 25vw, 30rem);
+    object-fit: cover;
+    border-radius: 1.2rem;
 }
 
 /* ===== ABOUT SERVICE PAGE ===== */
@@ -759,7 +767,7 @@ footer {
     }
 
     .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1.2rem;
     }
 
