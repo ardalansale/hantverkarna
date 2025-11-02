@@ -19,13 +19,22 @@
         <nav class="nav-primary" aria-label="Huvudmeny">
             <div class="nav-wrapper">
                 <div class="logo-container">
-                    <a href="/index.html" class="logo" aria-label="Hantverkarna, startsida">Hantverkarna</a>
+                    <a href="/index.html" class="logo" aria-label="Hantverkarna, gå till startsidan">Hantverkarna</a>
                 </div>
                 
                 <div class="nav-buttons">
-                    <a href="om-tjansten.html" class="btn primary" aria-label="Om tjänsten"><i class="fa-regular fa-handshake" aria-hidden="true"></i>Om tjänsten</a>
-                    <a href="/404.html" class="btn primary" aria-label="Meddelanden"><i class="fa-regular fa-message" aria-hidden="true"></i>Meddelanden</a>
-                    <button type="button" class="btn secondary" aria-label="Logga in"><i class="fa-regular fa-user" aria-hidden="true"></i>Logga in</button>
+                    <a href="om-tjansten.html" class="btn primary" aria-label="Läs om tjänsten">
+                        <i class="fa-regular fa-handshake" aria-hidden="true"></i>
+                        <span>Om tjänsten</span>
+                    </a>
+                    <a href="/404.html" class="btn primary" aria-label="Gå till meddelanden">
+                        <i class="fa-regular fa-message" aria-hidden="true"></i>
+                        <span>Meddelanden</span>
+                    </a>
+                    <button type="button" class="btn secondary" aria-label="Logga in på ditt konto">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        <span>Logga in</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -87,39 +96,41 @@
     </main>
     
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-wrapper">
-            <div class="footer-brand">Hantverkarna</div>
+            <div class="footer-logo">
+                <a href="/index.html" class="logo" aria-label="Hantverkarna logotyp, gå till startsidan">Hantverkarna</a>
+            </div>
             
-            <div class="footer-column">
-                <h3>Om oss</h3>
+            <nav class="footer-column" aria-labelledby="footer-about">
+                <h3 id="footer-about">Om oss</h3>
                 <ul>
                     <li><a href="om-oss.html">Om Hantverkarna</a></li>
                     <li><a href="/404.html">Press</a></li>
                     <li><a href="/404.html">Jobba hos oss</a></li>
                     <li><a href="/404.html">Kontakta oss</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="footer-column">
-                <h3>Villkor</h3>
+            <nav class="footer-column" aria-labelledby="footer-terms">
+                <h3 id="footer-terms">Villkor</h3>
                 <ul>
                     <li><a href="/404.html">Användarvillkor</a></li>
                     <li><a href="/404.html">Personuppgiftshantering</a></li>
                     <li><a href="/404.html">Cookies</a></li>
                     <li><a href="/404.html">Sekretess</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="footer-column">
-                <h3>För företag</h3>
+            <nav class="footer-column" aria-labelledby="footer-business">
+                <h3 id="footer-business">För företag</h3>
                 <ul>
                     <li><a href="/404.html">För företag</a></li>
                     <li><a href="/404.html">Bli hantverkare</a></li>
                     <li><a href="/404.html">Prissättning</a></li>
                     <li><a href="/404.html">Support</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </footer>
 </body>

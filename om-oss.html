@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Om  Hantverkarna">
+    <meta name="description" content="Läs om Hantverkarna - en mötesplats för hantverkare och kunder. Vi hjälper dig hitta pålitliga hantverkare och ger hantverkare möjlighet att nå fler kunder.">
     <title>Om Oss - Hantverkarna</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -19,13 +19,22 @@
         <nav class="nav-primary" aria-label="Huvudmeny">
             <div class="nav-wrapper">
                 <div class="logo-container">
-                    <a href="/index.html" class="logo" aria-label="Hantverkarna, startsida">Hantverkarna</a>
+                    <a href="/index.html" class="logo" aria-label="Hantverkarna, gå till startsidan">Hantverkarna</a>
                 </div>
                 
                 <div class="nav-buttons">
-                    <a href="om-tjansten.html" class="btn primary" aria-label="Om tjänsten"><i class="fa-regular fa-handshake" aria-hidden="true"></i>Om tjänsten</a>
-                    <a href="/404.html" class="btn primary" aria-label="Meddelanden"><i class="fa-regular fa-message" aria-hidden="true"></i>Meddelanden</a>
-                    <button type="button" class="btn secondary" aria-label="Logga in"><i class="fa-regular fa-user" aria-hidden="true"></i>Logga in</button>
+                    <a href="om-tjansten.html" class="btn primary" aria-label="Läs om tjänsten">
+                        <i class="fa-regular fa-handshake" aria-hidden="true"></i>
+                        <span>Om tjänsten</span>
+                    </a>
+                    <a href="/404.html" class="btn primary" aria-label="Gå till meddelanden">
+                        <i class="fa-regular fa-message" aria-hidden="true"></i>
+                        <span>Meddelanden</span>
+                    </a>
+                    <button type="button" class="btn secondary" aria-label="Logga in på ditt konto">
+                        <i class="fa-regular fa-user" aria-hidden="true"></i>
+                        <span>Logga in</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -33,76 +42,78 @@
 
     <!-- Innehåll -->
     <main class="wrapper about-us">
-    <!-- Om Hantverkarna -->
-        <section class="about-us-container">
+        <!-- Om Hantverkarna -->
+        <section class="about-us-container" aria-labelledby="about-heading">
             <div class="page-title">
-                <h1>Om Oss</h1>
+                <h1 id="about-heading">Vilka är vi?</h1>
                 <p>
                     Hantverkarna är en mötesplats för hantverkare och kunder – där båda vinner.
                 </p>
                 <p>
                     <strong>För kunder</strong> gör vi det enkelt att hitta pålitliga hantverkare
                     i ert område. Med våra verifierade profiler, recensioner och enkla
-                    bokningssystemsparar ni tid och slipper onödig stress.
+                    bokningssystem sparar ni tid och slipper onödig stress.
                     Oavsett om ni behöver en målare, elektriker eller snickare –
                     här hittar ni rätt person för jobbet.
+                </p>
                 <p>
                     <strong>För hantverkare och företag</strong> erbjuder vi en plattform att
                     visa upp er kompetens, nå fler kunder och växa ert varumärke –
                     utan krångel. Oavsett om ni är frilansare eller ett etablerat företag,
                     hjälper vi er att synas och få fler uppdrag.
                 </p>
-                </p>
             </div>
 
-        <div class="about-us-images">
-            <div class="about-us-image">
-                <img src="images/om-oss-1.webp" alt="Två hantverkare" loading="lazy">
-                <figcaption>En plattform som förenklar för både hantverkare och kunder.</figcaption>
-            </div>
+            <div class="about-us-images">
+                <figure class="about-us-image">
+                    <img src="images/om-oss-1.webp" alt="" loading="lazy">
+                    <figcaption>En plattform som förenklar för både hantverkare och kunder.</figcaption>
+                </figure>
 
-            <div class="about-us-image">
-                <img src="images/om-oss-2.webp" alt="Familj kollar på en laptop" loading="lazy">
-                <figcaption>Kolla, jämför och ta ett beslut tillsammans.</figcaption>
+                <figure class="about-us-image">
+                    <img src="images/om-oss-2.webp" alt="" loading="lazy">
+                    <figcaption>Kolla, jämför och ta ett beslut tillsammans.</figcaption>
+                </figure>
             </div>
-        </div>
-        
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-wrapper">
-            <div class="footer-brand">Hantverkarna</div>
+            <div class="footer-logo">
+                <a href="/index.html" class="logo" aria-label="Hantverkarna logotyp, gå till startsidan">Hantverkarna</a>
+            </div>
             
-            <div class="footer-column">
-                <h3>Om oss</h3>
+            <nav class="footer-column" aria-labelledby="footer-about">
+                <h3 id="footer-about">Om oss</h3>
                 <ul>
                     <li><a href="om-oss.html">Om Hantverkarna</a></li>
                     <li><a href="/404.html">Press</a></li>
                     <li><a href="/404.html">Jobba hos oss</a></li>
                     <li><a href="/404.html">Kontakta oss</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="footer-column">
-                <h3>Villkor</h3>
+            <nav class="footer-column" aria-labelledby="footer-terms">
+                <h3 id="footer-terms">Villkor</h3>
                 <ul>
                     <li><a href="/404.html">Användarvillkor</a></li>
                     <li><a href="/404.html">Personuppgiftshantering</a></li>
                     <li><a href="/404.html">Cookies</a></li>
                     <li><a href="/404.html">Sekretess</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="footer-column">
-                <h3>För företag</h3>
+            <nav class="footer-column" aria-labelledby="footer-business">
+                <h3 id="footer-business">För företag</h3>
                 <ul>
                     <li><a href="/404.html">För företag</a></li>
                     <li><a href="/404.html">Bli hantverkare</a></li>
                     <li><a href="/404.html">Prissättning</a></li>
                     <li><a href="/404.html">Support</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </footer>
 </body>

@@ -200,36 +200,8 @@ footer {
     border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-brand {
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-
-.footer-social {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.footer-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.6rem;
-    height: 3.6rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: all 0.2s ease;
-}
-
-.footer-social a:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-0.2rem);
-}
-
-.footer-social i {
+.footer-logo a {
     font-size: 1.8rem;
-    color: white;
 }
 
 /* Components */
@@ -276,7 +248,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 32rem;
-    gap: clamp(2rem, 0.571rem + 3.81vw, 4rem);
+    gap: clamp(2rem, 0.571rem + 2.81vw, 2rem);
     background:  linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.65) 100%),
     url('../images/hero-bg.webp') no-repeat;
     border-radius: 2rem;
@@ -289,7 +261,7 @@ footer {
     color: white;
     display: flex;
     flex-direction: column;
-    gap: clamp(0.4rem, -0.171rem + 1.524vw, 1.2rem);
+    gap: 0.4rem;
 }
 
 .hero-search {
@@ -304,25 +276,30 @@ footer {
 .hero-searchbar form {
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem 1.4rem;
+    padding: 0.4rem 1.4rem;
     background-color: rgb(255, 255, 255);
     border: 0.2rem solid var(--primary-color);
     border-radius: 1.4rem;
     width: clamp(40rem, 30.857rem + 19.048vw, 50rem);
+    /* align-items: center; */
 }
 
 .searchbar-btn {
-    padding: 0.4rem 1.4rem;
+    padding: 0.4rem 0.4rem 0.4rem 1.8rem; /* Centrerar knappens text*/
     border: none; 
     background-color: transparent;
     cursor: pointer;
     border-left: 0.2rem solid var(--primary-color);
-    font-weight: 600;
+    font-weight: 800;
+    flex-shrink: 0;
 }
 
 .hero-searchbar input[type=search] {
+    flex: 1;
     border: none;
     background-color: transparent;
+    padding: 0.4rem 0;
+
 }
 
 .hero-searchbar input[type=search]:focus {
@@ -388,8 +365,8 @@ footer {
 }
 
 .category-banner__item:hover {
-    box-shadow: 0 4px 12px rgba(255, 127, 0, 0.2);
-    transform: translateY(-0.4rem);
+    box-shadow: 0 4px 8px rgba(163, 163, 163, 0.2);
+    transform: translateY(-0.2rem);
 }
 
 .category-banner__item a {
@@ -545,41 +522,57 @@ footer {
 /* Om Oss */
 
 .about-us-container {
-    grid-area: about-us;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: fit-content;
-    gap: clamp(1.2rem, 0.943rem + 2.286vw, 2rem);
+    gap: clamp(2rem, 3vw, 3rem);
+    padding: 2.4rem;
+}
+
+.page-title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.page-title h1 {
+    margin: 0;
+}
+
+.page-title p {
+    margin: 0;
+    color: var(--tertiary-color);
+    line-height: 1.6;
 }
 
 .about-us-images {
-    display: flex;
-    gap: clamp(4rem, -1.714rem + 15.238vw, 8rem);
-    width: 100%;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.6rem, 2vw, 2rem);
+    margin-top: 2rem;
 }
 
 .about-us-image {
-    overflow: hidden;
-    text-align: center;
-    max-height: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .about-us-image img {
-    width: auto;
-    display: block;
+    width: 100%;
+    height: clamp(20rem, 25vw, 30rem);
     object-fit: cover;
-    border-radius: clamp(0.4rem, -0.029rem + 1.143vw, 1rem);
-    height: 80%;
+    border-radius: 1.2rem;
+}
+
+.about-us-image:nth-child(2) img {
+    object-position: center 30%; /* Drar ned höra bilden */
 }
 
 .about-us-image figcaption {
-    margin-top: 1rem;
     font-size: 1.4rem;
     color: var(--tertiary-color);
+    text-align: center;
     font-style: italic;
-    
 }
 
 /* 404 Error / Not Found */
@@ -682,9 +675,18 @@ footer {
         height: clamp(10rem, 18vw, 12rem);
     }
     
-    /* Om Oss */
+    /* Om Tjänsten*/
     .about-service-image {
         max-width: 100%;
         margin: 1.6rem auto;
+    }
+
+    /* Om Oss */
+    .about-us-container {
+        padding: 1.6rem;
+    }
+
+    .about-us-images {
+        grid-template-columns: 1fr;
     }
 }
