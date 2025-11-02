@@ -60,9 +60,9 @@ h3 {
     padding-left: clamp(2rem, 0.571rem + 3.81vw, 4rem);
     padding-right: clamp(2rem, 0.571rem + 3.81vw, 4rem);
     margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
+    margin-bottom: clamp(4rem, 1.143rem + 7.619vw, 8rem);
     display: grid;
     gap: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
-    margin-bottom: 0;
 }
 
 .wrapper.home {
