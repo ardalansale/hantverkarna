@@ -88,6 +88,13 @@ h3 {
         "footer"
 }
 
+.wrapper.contact {
+    grid-template-areas:
+        "header"
+        "contact"
+        "footer"
+}
+
 .wrapper.error {
     grid-template-areas:
         "header"
@@ -449,9 +456,8 @@ footer {
     grid-area: about-service;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: fit-content;
-    gap: clamp(2.8rem, 1.943rem + 2.286vw, 4rem);
+    gap: clamp(2rem, 3vw, 3rem);
+    padding: 2.4rem;
 }
 
 .how-container {
@@ -515,6 +521,7 @@ footer {
 
 /* ===== ABOUT US PAGE ===== */
 .about-us-container {
+    grid-area: about-us;
     display: flex;
     flex-direction: column;
     gap: clamp(2rem, 3vw, 3rem);
@@ -552,6 +559,108 @@ footer {
     font-style: italic;
 }
 
+/* ===== CONTACT ===== */
+.contact-form-container {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.4rem;
+}   
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    border: 0.2rem solid #d0d0d0;
+    border-radius: 0.8rem;
+    background: transparent;
+    font-size: 1.6rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    min-height: 12rem;
+    resize: vertical;
+}
+
+.required {
+    color: var(--primary-color);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    flex: 1;
+    padding: 0.7rem 1.4rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: 0.2rem var(--primary-color) solid;
+    border-radius: 1.4rem;
+    font-size: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: color-mix(in srgb, var(--primary-color) 85%, black);
+    border-color: color-mix(in srgb, var(--primary-color) 85%, black);
+}
+
+.btn-reset {
+    flex: 1;
+    padding: 0.7rem 1.4rem;
+    background-color: transparent;
+    color: var(--tertiary-color);
+    border: 0.2rem var(--tertiary-color) solid;
+    border-radius: 1.4rem;
+    font-size: clamp(1.4rem, 1.257rem + 0.381vw, 1.6rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+    background-color: var(--tertiary-color);
+    color: white;
+}
+
+.btn-reset:active {
+    background-color: transparent;
+    color: var(--tertiary-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
 /* ===== ERROR PAGE ===== */
 .error-container {
     grid-area: error;
@@ -567,6 +676,8 @@ footer {
 .error-container a {
     color: blue;
 }
+
+
 
 /* ===== MEDIA QUERIES ===== */
 @media (max-width: 1024px) {
@@ -668,5 +779,17 @@ footer {
 
     .about-us-images {
         grid-template-columns: 1fr;
+    }
+
+    .contact-form-container {
+        padding: 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
     }
 }
