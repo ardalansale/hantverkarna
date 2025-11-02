@@ -57,13 +57,67 @@ h3 {
     display: none;
 }
 
+/* Global Structure - Main */
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 clamp(2rem, 0.571rem + 3.81vw, 4rem);
+    margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
+    display: grid;
+    gap: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
+    margin-bottom: 0;
+}
+
+.wrapper.home {
+    grid-template-areas:
+        "header"
+        "hero"
+        "categories"
+        "articles"
+        "footer"
+}
+
+.wrapper.about-service {
+    grid-template-areas:
+        "header"
+        "about-service"
+        "footer"
+}
+
+.wrapper.about-us {
+    grid-template-areas:
+        "header"
+        "about-us"
+        "footer"
+}
+
+.wrapper.error {
+    grid-template-areas:
+        "header"
+        "error"
+        "footer"
+}
+
+.page-title {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, -0.171rem + 1.524vw, 1.2rem);
+}
+
+.page-title h1 {
+    color: var(--primary-color);
+}
+
 /* Global Structure - Navbar */
 .nav-container {
-    width: 100%;
+    grid-area: header;
+    min-width: 100%;
+    background-color: blue;
+
 }
 
 .nav-primary {
-    width: 100%;
     height: 8.4rem;
     box-shadow: 0 5px 10px rgba(154, 160, 185, 0.25), 0 15px 40px rgba(166, 173, 201, 0.2);
     border-radius: 0 0 0.4rem 0.4rem;
@@ -77,6 +131,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .nav-buttons {
@@ -99,58 +154,12 @@ h3 {
     display: none;
 }
 
-/* Global Structre - Main */
-.wrapper {
-    max-width: 120rem;
-    margin: 0 auto;
-    padding: 0 clamp(2rem, 0.571rem + 3.81vw, 4rem);
-    margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
-    display: grid;
-    gap: clamp(2rem, 1.714rem + 0.762vw, 2.4rem);
-    margin-bottom: 0;
-}
-
-.wrapper.home {
-    grid-template-areas:
-        "hero"
-        "categories"
-        "articles"
-        "footer"
-    /* grid-column: auto; */
-}
-
-.wrapper.about-service {
-    grid-template-areas:
-        "about-service"
-    /* grid-column: auto; */
-}
-
-.wrapper.about-us {
-    grid-template-areas:
-        "about-us"
-    /* grid-column: auto; */
-}
-
-.wrapper.error {
-    grid-template-areas:
-        "error"
-    /* grid-column: auto; */
-}
-
-.page-title {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.8rem, -0.171rem + 1.524vw, 1.2rem);
-}
-
-.page-title h1 {
-    color: var(--primary-color);
-}
-
 /* Global Structure - Footer */
 footer {
-    background-color: var(--text-color);
+    grid-area: footer;
+    /* background-color: var(--text-color); */
+    background-color: red;
+    /* max-width: 120rem; */
     color: white;
     padding: clamp(3rem, 5vw, 4rem) clamp(2rem, 0.571rem + 3.81vw, 4rem);
     margin-top: clamp(4rem, 1.143rem + 7.619vw, 8rem);
@@ -158,12 +167,13 @@ footer {
 
 .footer-wrapper {
     max-width: 120rem;
+    background-color: blue;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: clamp(2rem, 3vw, 3rem);
     margin-bottom: 3rem;
-        justify-items: center;
+    justify-items: center;
 
 }
 
@@ -190,14 +200,6 @@ footer {
 .footer-column a:hover {
     color: var(--primary-color);
     text-decoration: underline;
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 2rem;
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-logo a {
@@ -597,7 +599,7 @@ footer {
 @media (max-width: 1024px) {
 
     /* Footer */
-    .footer-brand {
+    .footer-logo {
     display: none;
     }
 
