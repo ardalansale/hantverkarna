@@ -12,6 +12,13 @@ html {
     text-size-adjust: none;
 }
 
+/* Säkerställ att body fyller viewport */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 /* Ta bort standardmarginal på vanliga blockelement */
 body, h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
